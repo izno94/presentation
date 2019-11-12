@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+
+<form
+  class="col-sm-6 offset-sm-3 my-3"
+  #formNewArticle="ngForm"
+  (submit)="onCreateArticle($event, formNewArticle)"
+>
+  <!-- div.form-group*2>label+input.form-control -->
+  <div class="form-group">
+    <label for="login">Titre</label>
+    <input
+      type="text"
+      class="form-control"
+      id="title"
+      name="title"
+      ngModel
+      #title="ngModel"
+    />
+  </div>
+  <div class="form-group">
+    <label for="contenu">Contenu</label>
+    <input
+      type="text"
+      class="form-control"
+      id="contenu"
+      name="contenu"
+      ngModel
+      #contenu="ngModel"
+    />
+  </div>
+  <div class="form-group text-center">
+    <input type="submit" class="btn btn-primary" value="Créer" />
+  </div>
+</form>
+
+<hr />
+<div class="text-center">
+  <a class="btn btn-warning" routerLink="/admin/home"> Retour au Dashbord</a>
+</div>

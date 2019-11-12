@@ -1,0 +1,20 @@
+<section class="row">
+  <div class="col-5">
+    <div class="card">
+      <div class="card-header">
+        Menu
+      </div>
+      <div class="card-body">
+        <ul class="list-unstyled">
+          <li><a routerLink="/">retour au front</a></li>
+          <li><a (click)="authService.logoutBack()">deconnexion</a></li>
+          <li><a routerLink="/admin/user">gestion des utilisateurs</a></li>
+          <li><a routerLink="/admin/article">gestion des articles</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <p>Bienvenue dans le Back office !!!!</p>
+  </div>
+</section>
